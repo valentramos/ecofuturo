@@ -4,6 +4,6 @@ const stopVideo = () => {
 // videoControls();
 
 const playVideo = () => {
-	$('#sample_video').trigger('play'); 
+	$('#sample_video').trigger('play'), delay(2000); 
 }
 // videoControls();
