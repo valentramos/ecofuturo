@@ -1,9 +1,10 @@
 const stopVideo = () => {
-	$('#sample_video').trigger('pause');	  
+	$('#sample_video').trigger('pause');
+	$('#normativa_video').trigger('pause');	  
 }
 // videoControls();
 
 const playVideo = () => {
-	$('#sample_video').trigger('play'), delay(2000); 
+	$('#sample_video').trigger('play'); 
 }
 // videoControls();
