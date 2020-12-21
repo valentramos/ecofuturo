@@ -32,7 +32,7 @@ const dataPicker = () => {
 		document.body.appendChild(oCSS);
 	  }
 	});
-	$.datepicker.regional['es'] = {
+	$(dateClass).datepicker.regional['es'] = {
 		closeText: 'Cerrar',
 		prevText: '< Ant',
 		nextText: 'Sig >',
