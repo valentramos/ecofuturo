@@ -16,8 +16,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.5a501baef8eaf9c971e5.css"></head>
+<link rel="stylesheet" href="styles.3f85a2a1284d6cfdc773.css"></head>
 <body>
+
+  <app-root></app-root>
+  
+  <script>
+
+    if (/MSIE 10/i.test(navigator.userAgent)) {
+      // This is internet explorer 10 
+      window.alert('isIE10');
+    }
+
+    if (/MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent)) {
+      // This is internet explorer 9 or 11 
+      window.location = 'pages/core/ie.htm';
+    }
+
+    if (/Edge\/\d./i.test(navigator.userAgent)) {
+      // This is Microsoft Edge 
+      window.alert('Microsoft Edge');
+    } 
+  </script>
+
   <app-root></app-root>
   <div class="release-version">Ecofuturo v. 1.1.7</div>
 <script src="runtime.acf0dec4155e77772545.js" defer></script><script src="polyfills-es5.fb6ea76cf29e48b073b8.js" nomodule defer></script><script src="polyfills.e099491f8ef3e4ccb149.js" defer></script><script src="scripts.a72f986167712e69271a.js" defer></script><script src="main.4eb2e99b33069ebb541e.js" defer></script></body>
