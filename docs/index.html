@@ -19,27 +19,59 @@
 <link rel="stylesheet" href="styles.3f85a2a1284d6cfdc773.css"></head>
 <body>
 
+<section class="vh-100 w-100 d-flex" id="show_message_navigator">
+  <div class="container">
+    <div class="row h-100 d-flex align-items-center justify-content-center text-center">
+      <div class="col-12">
+        <img src="assets/images/ecofuturo-logo.svg" width="160px">
+        <h4 class="color-3 my-5">Actualiza tu navegador</h4>
+        <p class="mb-1">Estás utilizando un navegador web que no es compatible con este sitio.</p>
+        <p>Para mejorar tu experiencia, ve a uno de estos sitios y obtén la última versión de tu navegador:</p>
+        <div class="mt-5">
+          <a class="color-1" href="https://www.google.com/intl/es/chrome/" target="_blank">Google Chrome</a> -
+          <a class="color-2" href="https://www.mozilla.org/es-ES/firefox/new/" target="_blank">Mozilla Firefox</a> -
+          <a class="color-3" href="https://www.microsoft.com/es-es/edge" target="_blank">Microsoft Edge</a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+      </div>
+      <div class="col-lg-4">
+      </div>
+      <div class="col-lg-4">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div id="show_content" style="display:none !important;">
   <app-root></app-root>
-  
+  </div>
   <script>
+    var getBrowserInfo = function() {
+      var ua= navigator.userAgent, tem, M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+      if(/trident/i.test(M[1])){
+          tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+          return 'IE '+(tem[1] || '');
+      }
+      if(M[1]=== 'Chrome'){
+          tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+          if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+      }
+      M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+      if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+      return M.join(' ');
+    };
 
-    if (/MSIE 10/i.test(navigator.userAgent)) {
-      // This is internet explorer 10 
-      window.alert('isIE10');
+    var elContent = document.getElementById('show_content');
+    var elMessage = document.getElementById('show_message_navigator');
+    var unsupportedBrowsers = ["IE 11", "IE 10", "IE 9", "IE 7", "IE 6", "IE 5"];
+    if( unsupportedBrowsers.includes(getBrowserInfo()) ) {
+      elContent.setAttribute('style', 'display:none !important');
+    } else {
+      elMessage.setAttribute('style', 'display:none !important');
+      elContent.setAttribute('style', 'display:block !important');
     }
-
-    if (/MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent)) {
-      // This is internet explorer 9 or 11 
-      window.location = 'pages/core/ie.htm';
-    }
-
-    if (/Edge\/\d./i.test(navigator.userAgent)) {
-      // This is Microsoft Edge 
-      window.alert('Microsoft Edge');
-    } 
   </script>
-
-  <app-root></app-root>
-  <div class="release-version">Ecofuturo v. 1.1.7</div>
+  <div class="release-version">Ecofuturo v. 1.1.8</div>
 <script src="runtime.acf0dec4155e77772545.js" defer></script><script src="polyfills-es5.fb6ea76cf29e48b073b8.js" nomodule defer></script><script src="polyfills.e099491f8ef3e4ccb149.js" defer></script><script src="scripts.a72f986167712e69271a.js" defer></script><script src="main.4eb2e99b33069ebb541e.js" defer></script></body>
 </html>
