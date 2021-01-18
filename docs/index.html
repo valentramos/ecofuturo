@@ -19,33 +19,46 @@
 <link rel="stylesheet" href="styles.3f85a2a1284d6cfdc773.css"></head>
 <body>
 
-<section class="vh-100 w-100 d-flex" id="show_message_navigator">
-  <div class="container">
-    <div class="row h-100 d-flex align-items-center justify-content-center text-center">
-      <div class="col-12">
-        <img src="assets/images/ecofuturo-logo.svg" width="160px">
-        <h4 class="color-3 my-5">Actualiza tu navegador</h4>
-        <p class="mb-1">Estás utilizando un navegador web que no es compatible con este sitio.</p>
-        <p>Para mejorar tu experiencia, ve a uno de estos sitios y obtén la última versión de tu navegador:</p>
-        <div class="mt-5">
-          <a class="color-1" href="https://www.google.com/intl/es/chrome/" target="_blank">Google Chrome</a> -
-          <a class="color-2" href="https://www.mozilla.org/es-ES/firefox/new/" target="_blank">Mozilla Firefox</a> -
-          <a class="color-3" href="https://www.microsoft.com/es-es/edge" target="_blank">Microsoft Edge</a>
+  <sectio id="show_message_navigator">
+    <div class="container">
+      <div class="row vh-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-12 pb-0">
+          <img class="w-50" src="assets/images/module/1.svg">
+          <h3 class="color-3 my-5">Actualiza tu navegador</h3>
+          <p class="mb-1">Estás utilizando un navegador web que no es compatible con este sitio.</p>
+          <p class="pb-5">Para mejorar tu experiencia, ve a uno de estos sitios y obtén la última versión de tu navegador:</p>
+          <div class="row mt-5">
+            <div class="col-lg-4 col-4">
+              <a href="https://www.google.com/intl/es/chrome/" target="_blank">
+                <img class="w-25" src="assets/images/icons/chome-icon.png" alt="Google Chrome">
+                <h5 class="mt-4 color-1">Google Chrome</h5>
+              </a>
+            </div>
+            <div class="col-lg-4 col-4">
+              <a href="https://www.mozilla.org/es-ES/firefox/new/" target="_blank">
+                <img class="w-25" src="assets/images/icons/firefox-icon.png" alt="Mozilla Firefox Chrome">
+                <h5 class="mt-4 color-1">Mozilla Firefox</h5>
+              </a>
+            </div>
+            <div class="col-lg-4 col-4">
+              <a href="https://www.microsoft.com/es-es/edge" target="_blank">
+                <img class="w-25" src="assets/images/icons/edge-icon.png" alt="Microsoft Edge">
+                <h5 class="mt-4 color-1">Microsoft Edge</h5>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-4">
-      </div>
-      <div class="col-lg-4">
-      </div>
-      <div class="col-lg-4">
+        <a href="https://www.bancoecofuturo.com.bo/sitio/" target="_blank">
+          <img src="assets/images/ecofuturo-logo.svg" width="160px">
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <div id="show_content" style="display:none !important;">
-  <app-root></app-root>
+    <app-root></app-root>
   </div>
+
   <script>
     var getBrowserInfo = function() {
       var ua= navigator.userAgent, tem, M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
