@@ -12,7 +12,7 @@ const stopAudio = () => {
 		}
 		}
 	});
-  /*********** /Utility ***********/  
+  	/*********** /Utility ***********/  
   
 	// $('#stop-audio-btn').click(function() {
 	// 	$('audio').stopAudio();
